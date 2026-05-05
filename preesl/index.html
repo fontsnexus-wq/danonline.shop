@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ranný medový zvyk: Čo by ste mali vedieť o svojej pamäti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:\'Source Sans 3\',sans-serif;background:#fff;color:#333;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ===== TOPBAR ===== */
+.topbar{background:#1a1a1a;padding:8px 0}
+.topbar-inner{max-width:680px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+.topbar-logo{font-family:\'Merriweather\',serif;font-size:16px;color:#fff;font-weight:700}
+.topbar-logo span{color:#e8a84c}
+.topbar-nav{display:flex;gap:16px}
+.topbar-nav a{font-size:11px;color:rgba(255,255,255,.6);transition:color .2s}
+.topbar-nav a:hover{color:#e8a84c}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb{max-width:680px;margin:0 auto;padding:12px 20px 0;font-size:11px;color:#aaa}
+.breadcrumb a{color:#888}
+.breadcrumb a:hover{color:#e8a84c}
+.breadcrumb span{margin:0 4px;color:#ccc}
+
+/* ===== ARTICLE ===== */
+.article{max-width:680px;margin:0 auto;padding:16px 20px 30px}
+
+/* ===== CAT + META ===== */
+.cat-meta{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.cat-pill{display:inline-block;background:#e8a84c;color:#fff;font-size:9px;font-weight:700;padding:3px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:1px}
+.meta-text{font-size:11px;color:#999}
+
+/* ===== HEADLINE ===== */
+h1{font-family:\'Merriweather\',serif;font-size:26px;color:#1a1a1a;line-height:1.35;font-weight:900;margin-bottom:10px}
+h1 em{color:#c4872e;font-style:normal}
+
+/* ===== LEAD ===== */
+.lead{font-size:17px;color:#555;line-height:1.7;margin-bottom:16px;font-weight:300;border-left:4px solid #e8a84c;padding-left:16px}
+
+/* ===== HERO ===== */
+.hero-wrap{margin-bottom:4px;border-radius:8px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.hero-wrap img{width:100%;cursor:pointer;transition:transform .3s}
+.hero-wrap img:hover{transform:scale(1.01)}
+.hero-cap{font-size:10px;color:#bbb;padding:5px 0 16px;font-style:italic}
+
+/* ===== CTA ENORME ===== */
+.cta-mega{margin:20px 0;padding:26px 24px;background:linear-gradient(135deg,#e8a84c,#c4872e);border-radius:12px;text-align:center;box-shadow:0 10px 40px rgba(232,168,76,.3)}
+.cta-mega h2{font-family:
+\'Merriweather\',serif;font-size:20px;color:#fff;font-weight:700;margin-bottom:6px;line-height:1.3}
+.cta-mega p{font-size:13px;color:rgba(255,255,255,.85);margin-bottom:16px;font-weight:300}
+.btn-giant{display:block;width:100%;background:#1a1a1a;color:#fff;padding:22px 30px;font-size:21px;font-weight:700;border-radius:10px;text-align:center;transition:all .25s;letter-spacing:.3px}
+.btn-giant:hover{background:#333;transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.3)}
+.cta-mega small{display:block;margin-top:10px;font-size:10px;color:rgba(255,255,255,.6)}
+
+/* ===== TEXT ===== */
+.art-text{font-size:17px;line-height:2;color:#444;margin-bottom:16px;font-weight:400}
+.art-text strong{color:#1a1a1a;font-weight:600}
+.art-text em{color:#c4872e;font-style:normal;font-weight:600}
+
+/* ===== QUESTION BANNER ===== */
+.q-banner{margin:22px 0;padding:20px 22px;background:#faf6f0;border-radius:10px;border:2px solid #e8a84c}
+.q-banner h3{font-family:
+\'Merriweather\',serif;font-size:19px;color:#1a1a1a;font-weight:700;line-height:1.4}
+.q-banner h3 em{color:#c4872e;font-style:normal}
+
+/* ===== TESTIMONIAL ===== */
+.testimonial{margin:22px 0;display:flex;gap:16px;background:#faf6f0;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+.t-img{width:42%;flex-shrink:0}
+.t-img img{width:100%;height:100%;object-fit:cover;cursor:pointer}
+.t-body{padding:20px 18px;display:flex;flex-direction:column;justify-content:center}
+.t-quote{font-family:
+\'Merriweather\',serif;font-size:15px;color:#444;font-style:italic;line-height:1.7;margin-bottom:10px}
+.t-name{font-size:12px;color:#c4872e;font-weight:700}
+@media(max-width:600px){
+.testimonial{flex-direction:column}
+.t-img{width:100%;height:220px}
+}
+
+/* ===== CTA BOTTOM ===== */
+.cta-bottom{margin:22px 0;padding:30px 24px;background:#1a1a1a;border-radius:12px;text-align:center;border:3px solid #e8a84c}
+.cta-bottom h3{font-family:
+\'Merriweather\',serif;font-size:22px;color:#e8a84c;margin-bottom:6px;font-weight:700}
+.cta-bottom p{font-size:14px;color:#aaa;margin-bottom:18px;font-weight:300}
+.btn-giant-alt{display:block;width:100%;background:#e8a84c;color:#1a1a1a;padding:24px 30px;font-size:22px;font-weight:700;border-radius:10px;text-align:center;transition:all .25s}
+.btn-giant-alt:hover{background:#d4962e;transform:translateY(-2px);box-shadow:0 8px 30px rgba(232,168,76,.4)}
+.cta-bottom small{display:block;margin-top:10px;font-size:10px;color:#666}
+
+/* ===== DISCLAIMER ===== */
+.disclaimer{margin:28px 0 0;padding:22px;background:#f8f6f2;border-radius:10px;border:1px solid #e8e4dc}
+.disclaimer h4{font-family:
+\'Merriweather\',serif;font-size:13px;color:#666;margin-bottom:10px;font-weight:700}
+.disclaimer p{font-size:11px;color:#888;line-height:1.9;margin-bottom:8px}
+.disclaimer p:last-child{margin-bottom:0}
+.disclaimer strong{color:#666}
+
+/* ===== FOOTER ===== */
+footer{max-width:680px;margin:0 auto;padding:20px 20px 40px;border-top:1px solid #eee}
+.footer-company{margin-bottom:14px;padding:16px 18px;background:#f8f6f2;border-radius:8px}
+.footer-company h5{font-family:
+\'Merriweather\',serif;font-size:13px;color:#1a1a1a;margin-bottom:6px}
+.footer-company p{font-size:10px;color:#888;line-height:1.9}
+.footer-links{text-align:center;font-size:10px;color:#aaa;margin-top:10px}
+.footer-links a{color:#c4872e;margin:0 8px}
+.footer-links a:hover{text-decoration:underline}
+.footer-copy{text-align:center;font-size:9px;color:#bbb;margin-top:8px}
+
+@media(max-width:640px){
+h1{font-size:21px}
+.btn-giant{font-size:18px;padding:20px}
+.btn-giant-alt{font-size:19px;padding:22px}
+.art-text{font-size:16px}
+.cta-mega h2{font-size:17px}
+.cta-bottom h3{font-size:19px}
+.topbar-nav{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+<div class="topbar-inner">
+<div class="topbar-logo">Slovenské<span>Zdravie</span></div>
+<div class="topbar-nav">
+<a href="#">Zdravie</a>
+<a href="#">Prírodné metódy</a>
+<a href="#">Recepty</a>
+</div>
+</div>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+<a href="#">Domov</a><span>›</span>
+<a href="#">Zdravie</a><span>›</span>
+<a href="#">Prírodné metódy</a><span>›</span>
+Ranný medový zvyk
+</div>
+
+<!-- ARTICLE -->
+<article class="article">
+
+<!-- CAT + META -->
+<div class="cat-meta">
+<span class="cat-pill">Prírodná pohoda</span>
+<span class="meta-text"><script>var d=new Date();var m=[\'január\',\'február\',\'marec\',\'apríl\',\'máj\',\'jún\',\'júl\',\'august\',\'september\',\'október\',\'november\',\'december\'];document.write(d.getFullYear()+\'. \'+m[d.getMonth()]+\' \'+d.getDate()+\'.\')</script> · 3 min čítania</span>
+</div>
+
+<!-- HEADLINE -->
+<h1>Prečo celé Slovensko hovorí <em>o tomto rannom medovom zvyku?</em></h1>
+
+<!-- LEAD -->
+<p class="lead">Príbeh dôchodcu z Bratislavy, ktorý zmenil jeden jednoduchý ranný zvyk — a celé jeho okolie si všimlo ten rozdiel.</p>
+
+<!-- HERO -->
+<div class="hero-wrap">
+<a href="http://danonline.shop/vslesl4"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663297503148/jCMGTU5NUP78zZrraNsLhW/mem_modelo-honey-hungarian-dark-gLA2Pvqrrfm7qnv3ngz3TA.webp" alt="Slovenský med s prírodnými zložkami"></a>
+</div>
+<p class="hero-cap">Foto: Slovenský med s prírodnými zložkami</p>
+
+<!-- ========== CTA 1 — ENORME ========== -->
+<div class="cta-mega">
+<h2>&#9654; Pozrite si video, ktoré ukazuje celý recept krok za krokom</h2>
+<p>Aké ingrediencie použiť · Ako ich zmiešať · Kedy piť</p>
+<a href="http://danonline.shop/vslesl4" class="btn-giant">KLIKNITE SEM PRE ZOBRAZENIE VIDEA &rarr;</a>
+<small>Bezplatný informačný obsah · Bez registrácie</small>
+</div>
+
+<!-- TEXT -->
+<p class="art-text">Poznáte ten pocit? Vojdete do kuchyne — a <strong>nepamätáte si, prečo ste tam išli.</strong> Stretnete starého známeho — a <strong>neviete si spomenúť na jeho meno.</strong> Položíte si okuliare — a <strong>hľadáte ich celé minúty.</strong></p>
+
+<p class="art-text">Väčšina ľudí povie: <em>„To je normálne, s tým sa nedá nič robiť."</em></p>
+
+<p class="art-text">Ale čo ak <strong>to nie je celý príbeh?</strong></p>
+
+<!-- QUESTION BANNER -->
+<div class="q-banner">
+<h3>Čo ak kľúč k <em>duševnej sviežosti</em> spočíva v našich ranných zvykoch?</h3>
+</div>
+
+<p class="art-text">Jeden bratislavský dôchodca — 67-ročný — začal každé ráno piť jednoduchú <em>medovú zmes</em>. Recept dostal od <strong>starého včelára</strong> na trhovisku, ktorý mu povedal: <em>„Toto som sa naučil od svojej starej mamy."</em></p>
+
+<p class="art-text">Nie je to drahý prípravok. Nie je to zložité. Len <strong>jedna lyžica medu</strong> — ale <em>nie tak, ako by ste si mysleli.</em></p>
+
+<p class="art-text">Pretože samotný med je len sladidlo. Ale ak ho <strong>skombinujete s niekoľkými ďalšími ingredienciami</strong> — ktoré nájdete v každej slovenskej kuchyni — a vypijete ho <em>ráno nalačno</em>... je to niečo úplne iné.</p>
+
+<!-- TESTIMONIAL -->
+<div class="testimonial">
+<div class="t-img">
+<a href="http://danonline.shop/vslesl4"><img src="./images/senior.jpg" alt="Spokojný senior"></a>
+</div>
+<div class="t-body">
+<p class="t-quote">"Najprv som tomu neveril, ale po dvoch týždňoch som sa cítil inak. Moja rodina si všimla, že som pozornejší."</p>
+<p class="t-name">— Jozef, 67 rokov, Bratislava</p>
+</div>
+</div>
+
+<p class="art-text">Dnes tento "ranný rituál" objavujú tisíce ľudí. Nie je to žiadna mágia, len <strong>čistá príroda</strong> skombinovaná správnym spôsobom.</p>
+
+<!-- CTA BOTTOM -->
+<div class="cta-bottom">
+<h3>Chcete poznať presný recept?</h3>
+<p>Pripravili sme krátke video, ktoré vysvetľuje celý postup.</p>
+<a href="http://danonline.shop/vslesl4" class="btn-giant-alt">ZOBRAZIŤ RECEPT TERAZ &rarr;</a>
+<small>Dostupné len obmedzený čas</small>
+</div>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer">
+<h4>Dôležité upozornenie</h4>
+<p>Tento obsah je určený výhradne na informačné a vzdelávacie účely. <strong>Nenahrádza odbornú lekársku pomoc</strong>, diagnostiku ani liečbu. Pred vykonaním akýchkoľvek zmien vo vašej strave alebo životnom štýle sa vždy poraďte so svojím lekárom.</p>
+<p>Výsledky sa môžu u jednotlivých osôb líšiť. Tento produkt je doplnok stravy a nie je určený na liečbu alebo prevenciu chorôb.</p>
+</div>
+
+</article>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-company">
+<h5>Informácie o spoločnosti</h5>
+<p>CNPJ: 65.069.136/0001-01</p>
+<p>Tento web je nezávislý informačný portál. Všetky práva vyhradené &copy; 2026.</p>
+</div>
+<div class="footer-links">
+<a href="privacy.html">Zásady ochrany osobných údajov</a> | 
+<a href="terms.html">Všeobecné obchodné podmienky</a>
+</div>
+<div class="footer-copy">Slovenské Zdravie &copy; 2026</div>
+</footer>
+
+<!-- UTM Passthrough -->
+<script>
+(function(){var q=window.location.search;if(!q)return;document.querySelectorAll(\'a[href]\').forEach(function(a){var h=a.getAttribute(\'href\');if(!h||h.startsWith(\'#\')||h.startsWith(\'mailto:\'))return;a.setAttribute(\'href\',h.includes(\'?\')?h+\'&\'+q.substring(1):h+q)})})();
+</script>
+<script>
+  window.googlePixelId = "69f9e0e2402a81a1a884fd74";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-google.js");
+  document.head.appendChild(a);
+</script>
+</body>
+</html>
